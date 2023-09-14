@@ -6,7 +6,7 @@
 */
 int main(void)
 {
-long long num = 612852475143, i, largest_p_factor = -1;
+ssize_t num = 612852475143, i, largest_p_factor = -1;
 
 while ((num % 2) == 0)
 {
@@ -23,7 +23,7 @@ num = num / i; }}
 if (num > 2)
 largest_p_factor = num;
 
-printf("%lld\n", largest_p_factor);
+printf("%ld\n", largest_p_factor);
 
 return (0);
 }
