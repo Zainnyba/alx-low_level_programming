@@ -2,11 +2,11 @@
 
 /**
  * print_diagonal -  draws a diagonal line on the terminal
- * @n: you get...
+ * @n: determines length of the line
 */
 void print_diagonal(int n)
 {
-int i, space = 0;
+int i, spc = 0;
 if (n <= 0)
 {
 _putchar('\n');
@@ -16,10 +16,7 @@ else
 {
 for (i = 0; i < n; i++)
 {
-for (space = 0; space < i; space++)
+for (spc = 0; spc < i; spc++)
 _putchar(32);
 _putchar(92);
-_putchar('\n');
-}
-}
-}
+_putchar('\n'); }}}

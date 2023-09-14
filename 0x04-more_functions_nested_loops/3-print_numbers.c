@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * print_numbers - prints the digits
+ * print_numbers - prints all digits
 */
 void print_numbers(void)
 {
-int i = 48;
-for ( ; i < 58; i++)
-_putchar(i);
+int digit = 48;
+for ( ; digit < 58; digit++)
+_putchar(digit);
 _putchar('\n');
 }

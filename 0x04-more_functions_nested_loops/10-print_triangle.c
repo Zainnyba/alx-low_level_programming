@@ -22,7 +22,7 @@ if (spa == size)
 continue;
 
 _putchar('\n');
-}
-}
+}}
+
 _putchar('\n');
 }
