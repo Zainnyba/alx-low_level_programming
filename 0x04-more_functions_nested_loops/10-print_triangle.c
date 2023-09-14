@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
-*print_triangle - prints a triangle made up of #'s on the terminal
-*@size: number #'s to make up triangle to be printed
-*/
+ * print_triangle - prints a triangle on the terminal
+ * @size: number of chars to print
+ */
 void print_triangle(int size)
 {
-int spa, sza;
+int space, i;
 
 if (size > 0)
 {
-for (spa = 1; spa <= size; spa++)
+for (space = 1; space <= size; space++)
 {
-for ((sza = size - spa); sza > 0; sza--)
+for ((i = size - space); i > 0; i--)
 _putchar(32);
 
-for (sza = 0; sza < spa; sza++)
+for (i = 0; i < space; i++)
 _putchar(35);
 
-if (spa == size)
+if (space == size)
 continue;
 
 _putchar('\n');

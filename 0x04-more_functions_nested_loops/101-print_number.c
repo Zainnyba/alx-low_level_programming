@@ -2,19 +2,17 @@
 
 /**
  * print_number - prints an integer
- * @n: number to be printed
+ * @n: integer to be printed
 */
 void print_number(int n)
 {
 unsigned int num = n;
+
 if (n < 0)
-{
-_putchar(45);
-num = -num;
-}
+_putchar(45), num = -num;
+
 if (num > 9)
-{
 print_number(num / 10);
-}
+
 _putchar((num % 10) + 48);
 }

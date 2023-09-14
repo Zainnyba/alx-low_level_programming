@@ -1,27 +1,26 @@
 #include "main.h"
 
 /**
-*main- prints the largest prime facto *of a number
-*Return: 0
+ * main- prints the largest prime factor of a number
+ * Return: 0
 */
 int main(void)
 {
-long number = 612852475143, reand;
-while (reand++ < number / 2)
+long num = 612852475143, i;
+while (i++ < num / 2)
 {
-if (number % reand == 0)
+if (num % i == 0)
 {
-number /= 2;
+num /= 2;
 continue;
 }
 
-for (reand = 3; reand < number / 2; reand += 2)
+for (i = 3; i < num / 2; i += 2)
 {
-if (number % reand == 0)
-number /= reand;
+if (num % i == 0)
+num /= i;
+}}
 
-}
-}
-printf("%ld\n", number);
+printf("%ld\n", num);
 return (0);
 }
