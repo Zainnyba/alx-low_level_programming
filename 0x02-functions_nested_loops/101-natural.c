@@ -1,17 +1,17 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * main -  prints sum of all mutiples of 3 and 5 below 1024
+ * main - prints count of multiples of 3 or 5 below 1024
  * Return: 0
 */
 int main(void)
 {
-int sum = 0, multiples = 1;
-for ( ; multiples < 1024; multiples++)
+int n, sum = 0;
+for (n = 0; n < 1024; n++)
 {
-if (multiples % 3 == 0 || multiples % 5 == 0)
-sum += multiples;
+if ((n % 3) == 0 || (n % 5) == 0)
+sum += n;
 }
-printf("sum = %d\n", sum);
+printf("%d\n", sum);
 return (0);
 }
