@@ -1,22 +1,23 @@
 #include "main.h"
 
 /**
- * main - prints the first 59 fibonacci numbers
- * Return: 0
+* main - prints sum of even fibonacci suit elements
+* fibonacci suit numbers
+* Return: 0
 */
 int main(void)
 {
-size_t a = 1, b = 2, fibonacci;
-printf("1, 2, ");
-while (fibonacci < 4000000)
+unsigned long num1 = 0, num2 = 1, num3 = 0, sum = 0;
+while (num3 <= 4000000)
 {
-fibonacci = a + b;
-a = b, b = fibonacci;
-if ((fibonacci % 2) == 0)
-printf("%ld", fibonacci);
-if (b != 47)
-printf(", ");
+num3 = num1 + num2;
+num1 = num2;
+num2 = num3;
+
+if ((num1 % 2) == 0)
+sum += num1;
+
 }
-putchar('\n');
+printf("%ld\n", sum);
 return (0);
 }
