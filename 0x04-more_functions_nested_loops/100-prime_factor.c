@@ -6,21 +6,24 @@
 */
 int main(void)
 {
-long num = 612852475143, i;
-while (i++ < num / 2)
-{
-if (num % i == 0)
-{
-num /= 2;
-continue;
-}
+long long num = 612852475143, i, largest_p_factor = -1;
 
-for (i = 3; i < num / 2; i += 2)
+while ((num % 2) == 0)
 {
-if (num % i == 0)
-num /= i;
-}}
+largest_p_factor = 2;
+num /= 2; }
 
-printf("%ld\n", num);
+for (i = 3; i <= sqrt(num); i += 2)
+{
+while (num % i == 0)
+{
+largest_p_factor = i;
+num = num / i; }}
+
+if (num > 2)
+largest_p_factor = num;
+
+printf("%lld\n", largest_p_factor);
+
 return (0);
 }
