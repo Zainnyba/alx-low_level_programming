@@ -3,7 +3,7 @@
 
 /**
  * puts_half - prints the second half of a string
- * @str: you should know what this does at this point
+ * @str: prints the second half of the string
 */
 void puts_half(char *str)
 {

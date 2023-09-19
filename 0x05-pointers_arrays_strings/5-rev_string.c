@@ -9,7 +9,7 @@ void rev_string(char *s)
 char c;
 int i = 0, j = 0;
 
-if (s == NULL) /*we can't be too sure now, can we?*/
+if (s == NULL)
 return;
 
 while (s[i])

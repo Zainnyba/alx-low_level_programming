@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * reset_to_98 - takes a pointer as argument and does stuff....kaboom!
- * @n: obviously a pointer, you can tell from the declaration
+ * reset_to_98 - yeah....
+ * @n: rhhhh.,
 */
 void reset_to_98(int *n)
 {

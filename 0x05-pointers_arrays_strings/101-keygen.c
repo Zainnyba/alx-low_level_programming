@@ -6,7 +6,6 @@
  */
 int main(void)
 {
-/*nvm, I have no idea how this shit works*/
-/*just return 0 bruh, I know I tried*/
+
 return (0);
 }

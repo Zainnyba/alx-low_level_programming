@@ -2,8 +2,8 @@
 
 /**
  * swap_int - swaps the vlue of two confused integers
- * @a: pointer to the first confused mf
- * @b: the second born
+ * @a: first number
+ * @b: the second argument
 */
 void swap_int(int *a, int *b)
 {

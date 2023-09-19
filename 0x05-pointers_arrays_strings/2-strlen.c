@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _strlen - loves to measure how long strings are
- * @s: pointer to the fine loong string to be measured
- * Return: length to whatev s points us to, ugh.
+ * _strlen - measures the length of a string
+ * @s: pointer to a string
+ * Return: length of s
 */
 int _strlen(char *s)
 {

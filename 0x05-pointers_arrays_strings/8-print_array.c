@@ -2,8 +2,8 @@
 
 /**
  * print_array - prints n elements of array a
- * @a: the array whose n elements are to be printed
- * @n: duhhhhh
+ * @a: the array
+ * @n: number of elements t be ptinrd
 */
 void print_array(int *a, int n)
 {
