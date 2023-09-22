@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _strcmp - Entry function
- * @s1: pointer to char
- * @s2: pointer to char
+ * _strcmp -dos omethings
+ * @s1: pointer to a tring
+ * @s2: pointer toa strng
  * Return: 0 or 1
  */
 int _strcmp(char *s1, char *s2)

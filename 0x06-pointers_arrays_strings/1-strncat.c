@@ -2,9 +2,9 @@
 #include <string.h>
 /**
  * _strncat - Entry function
- * @dest: pointer to char type
+ * @dest: pointer to radbffr d
  * @src: pointer to char type
- * @n: number of src char to concatenate with dest char
+ * @n: .
  * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)

@@ -2,8 +2,8 @@
 
 /**
 * string_toupper -> converting any string to upper case
-* @x: string param
-* Return: string
+* @x: argument
+* Return: pointer to he string
 */
 char *string_toupper(char *x)
 {
