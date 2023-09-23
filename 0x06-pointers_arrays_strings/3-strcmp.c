@@ -1,28 +1,27 @@
 #include "main.h"
+
 /**
- * _strcmp -dos omethings
- * @s1: pointer to a tring
- * @s2: pointer toa strng
- * Return: 0 or 1
+ * _strcmp -compares two strings
+ * @s1: argument 1
+ * @s2: argument 2
+ * Return: .
  */
 int _strcmp(char *s1, char *s2)
 {
-int i, ascii_s1, ascii_s2;
+int i, typecasted_S1, typecsted_S2;
+
 for (i = 0; ; i++)
 {
-ascii_s1 = (int) s1[i];
-ascii_s2 = (int) s2[i];
+typecasted_S1 = (int) s1[i];
+typecsted_S2 = (int) s2[i];
+
 if (s1[i] == '\0' && s2[i] == '\0')
-{
 return (0);
-}
-if (ascii_s1 > ascii_s2)
-{
-return (ascii_s1 - ascii_s2);
-}
-if (ascii_s1 < ascii_s2)
-{
-return (ascii_s1 - ascii_s2);
-}
-}
-}
+
+if (typecasted_S1 > typecsted_S2)
+return (typecasted_S1 - typecsted_S2);
+
+if (typecasted_S1 < typecsted_S2)
+return (typecasted_S1 - typecsted_S2);
+
+}}

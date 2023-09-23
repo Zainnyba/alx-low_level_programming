@@ -1,2 +1,2 @@
-More on Pointers and arrays and strings in C
-ALX is tough!
+More questions on Pointers, Arrays and Strings in C
+

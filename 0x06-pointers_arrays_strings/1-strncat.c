@@ -1,20 +1,23 @@
 #include "main.h"
-#include <string.h>
+
+
 /**
- * _strncat - Entry function
- * @dest: pointer to radbffr d
- * @src: pointer to char type
- * @n: .
+ * _strncat - concatenated two string
+ * @dest: pointer to destination buffer
+ * @src: pointer to the source string
+ * @n: number of bytes to of the source string to concatenate with dest
  * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
-int i, dest_len;
-dest_len = strlen(dest);
-for (i = 0; i < n && src[i] != '\0'; i++)
-{
-dest[dest_len + i] = src[i];
-}
-dest[dest_len + i] = '\0';
+int i = 0, len = 0;
+
+while (dest[len])
+len++;
+
+for ( ; i < n && src[i]; i++)
+dest[len + i] = src[i];
+
+dest[len + i] = '\0';
 return (dest);
 }

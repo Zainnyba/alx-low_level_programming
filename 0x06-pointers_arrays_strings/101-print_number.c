@@ -1,26 +1,22 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
-  * print_number - print numbers chars
-  * @n: integer params
-  * Return: 0
- **/
-
+  * print_number - prints an integer using onlyprintf
+  * @n: integer to be printed
+  */
 void print_number(int n)
 {
-	unsigned int n1;
+size_t temp_n = n; /*temp_n = temporary n*/
 
-	n1 = n;
+if (n < 0)
+{
+_putchar('-');
+temp_n = -n;
+}
 
-	if (n < 0)
-	{
-		_putchar('-');
-		n1 = -n;
-	}
+if (temp_n / 10 != 0)
+print_number(temp_n / 10);
 
-	if (n1 / 10 != 0)
-	{
-		print_number(n1 / 10);
-	}
-	_putchar((n1 % 10) + '0');
+_putchar((temp_n % 10) + '0');
 }

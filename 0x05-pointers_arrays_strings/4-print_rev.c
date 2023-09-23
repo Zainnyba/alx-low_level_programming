@@ -16,10 +16,10 @@ write(2, &err_msg[i], 1), i++;
 _putchar(10);
 return;
 }
-
+i = 0;
 while (s[i])
 i++;
-for ( ; i >= 0; i--)
+for (i -= 1; i >= 0; i--)
 _putchar(s[i]);
 _putchar(10);
 }
