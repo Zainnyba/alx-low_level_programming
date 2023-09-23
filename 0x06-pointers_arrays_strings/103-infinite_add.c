@@ -5,20 +5,35 @@
  */
 void _reverse(char *n)
 {
-int i = 0, j = 0;
-char c; /*temporary variable*/
+	int i = 0, j = 0;
+	char c; /*temporary variable*/
 
-while (*(n + i) != '\0')
-i++;
+	while (*(n + i) != '\0')
+		i++;
 
-i--;
+	i--;
 
-for (j = 0; j < i; j++, i--)
+	for (j = 0; j < i; j++, i--)
+	{
+		c = n[j];
+		n[j] = n[i];
+		n[i] = c;
+	}
+}
+
+/**
+ * _strlen - measures the length of a string
+ * @s: pointer to a string
+ * Return: length of s
+ */
+int _strlen(char *s)
 {
-c = n[j];
-n[j] = n[i];
-n[i] = c;
-}}
+int len = 0;
+
+while (s[len])
+len++;
+return (len);
+}
 
 /**
  * infinite_add - adds two numbers
@@ -30,42 +45,28 @@ n[i] = c;
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int bits = 0, i = 0, j = 0, dig = 0; /*bits = overflown numbers, dig = digits*/
-int crr = 0, crr1 = 0, temp = 0;
+int i = _strlen(n1) - 1, j = _strlen(n2) - 1;
+int carry = 0, sum, r_index = 0, num1, num2;
 
-while (n1[i])
-i++;
-while (n2[j])
-j++;
+if (i >= size_r || j >= size_r)
+return (0);
+
+while (i >= 0 || j >= 0 || carry)
+{
+num1 = (i >= 0) ? n1[i] - '0' : 0;
+num2 = (j >= 0) ? n2[j] - '0' : 0;
+
+sum = num1 + num2 + carry;
+carry = sum / 10;
+r[r_index++] = (sum % 10) + '0';
+
+if (r_index == size_r)
+return (0);
 
 i--, j--;
-if (j >= size_r || i >= size_r)
-return (0);
-
-while (j >= 0 || i >= 0 || bits == 1)
-{
-if (i < 0)
-crr = 0;
-else
-crr = n1[i] -'0';
-if (j < 0)
-crr1 = 0;
-else
-crr1 = n2[j] -'0';
-temp = crr + crr1 + bits;
-if (temp >= 10)
-bits = 1;
-else
-bits = 0;
-if (dig >= (size_r - 1))
-return (0);
-r[dig] = (temp % 10) + '0';
-dig++, j--, i--;
 }
 
-if (dig == size_r)
-return (0);
-r[dig] = '\0';
+r[r_index] = '\0';
 _reverse(r);
 return (r);
 }
